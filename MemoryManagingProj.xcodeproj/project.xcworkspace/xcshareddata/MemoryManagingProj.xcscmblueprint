@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0AA9D6316B4CC262A6B0D5F1CB1AFD9428E2D2F9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0AA9D6316B4CC262A6B0D5F1CB1AFD9428E2D2F9" : 9223372036854775807,
+    "34053DBB485C39AD11D56AF9BD424B9869443B88" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6B8861D7-072C-4931-AACE-68AC0CF0543F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0AA9D6316B4CC262A6B0D5F1CB1AFD9428E2D2F9" : "HW4Blocks\/",
+    "34053DBB485C39AD11D56AF9BD424B9869443B88" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MemoryManagingProj",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MemoryManagingProj.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nataliSM\/HW4Blocks.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0AA9D6316B4CC262A6B0D5F1CB1AFD9428E2D2F9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/spiridonova_11-503\/spiridonova_11-503.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "34053DBB485C39AD11D56AF9BD424B9869443B88"
+    }
+  ]
+}
