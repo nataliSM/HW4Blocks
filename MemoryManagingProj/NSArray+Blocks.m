@@ -47,24 +47,47 @@
     completionBlock(uniqueArray);
 }
 
-- (void)changeArr:(int)indexInArr andChangeIndex:(int)changeIndex andCompletionBlock:(void(^)(NSArray *arr))completionBlock{
-    id object = self[indexInArr];
+- (void)switchObjectAtIndex:(int)atIndex toIndex:(int)toIndex andCompletionBlock:(void(^)(NSArray *arr))completionBlock andErrorBlock:(void(^)(NSError *error))errorBlock
+{
+    if (atIndex < self.count & toIndex < self.count)
+    {
+    id object = self[atIndex];
     NSMutableArray *mutableCopy = [self mutableCopy];
     [mutableCopy removeObject:object];
-    [mutableCopy insertObject:object atIndex:changeIndex];
+    [mutableCopy insertObject:object atIndex:toIndex];
     
     completionBlock([mutableCopy copy]);
+    }else
+    {
+        NSError *error = [NSError errorWithDomain:@"Index is bigger than you need" code:1 userInfo:nil];
+        errorBlock(error);
+        
+        
+    }
+    
 }
 
 + (void)testArray:(NSArray *)array withSuccesBlock:(void(^)(NSArray *arr))successBlock andFailureBlock:(void(^)(NSError *error))failureBlock
 {
-    if (!array)
-    {
+    if (!array){
         NSError *error = [NSError errorWithDomain:@"Array is nil" code:1 userInfo:nil];
         failureBlock(error);
         return;
     }
+    
+    for (id obj in array)
+    {
+        if (![obj isEqual:[NSNull null]]){
+            continue;
+        }
+        NSError *error = [NSError errorWithDomain:@"Value is null" code:1 userInfo:nil];
+        failureBlock(error);
+        return;
+    }
     successBlock(array);
+    
+    
+    
     
 }
 
