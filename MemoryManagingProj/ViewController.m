@@ -61,7 +61,7 @@
 {
     if(!_mainArr)
     {
-        _mainArr = @[@"0" ,[NSNull null], @"5", @"7", @"8", @"9"];
+        _mainArr = @[@"0" ,@"4", @"5", @"7", @"8", @"9"];
     }
     return _mainArr;
 }
@@ -82,15 +82,13 @@
         NSLog(@"%@", myArr);
     }];
     
-    [self.mainArr changeArr:0 andChangeIndex:2 andCompletionBlock:^(NSArray *arr)
-    {
-        NSLog(@"%@",arr);
-    } andErrorBlock:^(NSError *error)
-    {
+    [self.mainArr switchObjectAtIndex:0 toIndex:2 andCompletionBlock:^(NSArray *arr) {
+         NSLog(@"%@",arr);
+    } andErrorBlock:^(NSError *error) {
         NSLog(@"%@", error);
     }];
     
-    self.mainArr = nil;
+    //self.mainArr = nil;
     
     [NSArray testArray:_mainArr withSuccesBlock:^(NSArray *arr) {
         NSString *logString = @"";

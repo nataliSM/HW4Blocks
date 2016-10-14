@@ -10,7 +10,7 @@
 
 @interface NSArray (Blocks)
 - (void)getUniqueArr:(NSArray *)arr andCompletionBlock:(void(^)(NSArray *myArr))completionBlock;
-- (void)changeArr:(int)indexInArr andChangeIndex:(int)changeIndex andCompletionBlock:(void(^)(NSArray *arr))completionBlock andErrorBlock:(void(^)(NSError *error))errorBlock;
+- (void)switchObjectAtIndex:(int)atIndex toIndex:(int)toIndex andCompletionBlock:(void(^)(NSArray *arr))completionBlock andErrorBlock:(void(^)(NSError *error))errorBlock;
 
 + (void)testArray:(NSArray *)array withSuccesBlock:(void(^)(NSArray *arr))successBlock andFailureBlock:(void(^)(NSError *error))failureBlock;
 @end
